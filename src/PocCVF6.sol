@@ -21,7 +21,7 @@ contract PocCVF6 {
         bool isLastL1RequestEvacuation = mockLastOpType == MockOpType.EVACUATION;
         if (!isExecutedL1RequestNumEqualToTotalL1RequestNum && !isLastL1RequestEvacuation)
             revert NotConsumedAllL1Requests(executedL1RequestNum, totalL1RequestNum);
-        console.log("gas used: %d", gas - gasleft()); // 310 wei
+        console.log("gas used: %d", gas - gasleft()); // 310 gas
         /* ========== Gas Test End ========== */
     }
 
@@ -35,7 +35,7 @@ contract PocCVF6 {
             bool isLastL1RequestEvacuation = mockLastOpType == MockOpType.EVACUATION;
             if (!isLastL1RequestEvacuation) revert NotConsumedAllL1Requests(executedL1RequestNum, totalL1RequestNum);
         }
-        console.log("gas used: %d", gas - gasleft()); // 289 wei
+        console.log("gas used: %d", gas - gasleft()); // 289 gas
         /* ========== Gas Test End ========== */
     }
 }
